@@ -7,8 +7,7 @@ export const path = {
 		css: "./build/css/",
 		html: "./build/",
 		images: "./build/img/",
-		fonts: "./build/fonts/",
-		files: "./build/files/"
+		fonts: "./build/fonts/"
 	},
 	src: {
 		js: "./src/js/script.js",
@@ -16,7 +15,7 @@ export const path = {
 		svg: "./src/img/**/*.svg",
 		scss: "./src/scss/style.scss",
 		html: "./src/*.html",
-		files: "./src/files/**/*.*"
+		fonts: "./src/fonts/*.{ttf,otf}"
 	},
 	watch: {
 		js: "./src/js/**/*.js",
