@@ -2,4 +2,4 @@
 
 Pack of plugins for gulp. Tested primarily on Linux.
 
-Pool requests are always welcome.
+Pull requests are always welcome.
