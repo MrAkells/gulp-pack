@@ -50,7 +50,7 @@ export const fontsStyle = () => {
             if (!fs.existsSync(fontsFile)) {
                 fs.writeFile(fontsFile, "", cb);
                 let newFileOnly;
-                for (var i = 0; i < fontsFiles.lenght; i++) {
+                for (var i = 0; i < fontsFiles.length; i++) {
                     let fontFileName = fontsFiles[i].split(".")[0];
                     if (newFileOnly !== fontFileName) {
                         let fontName = fontFileName.split("-")[0]
