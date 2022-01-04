@@ -1,28 +1,31 @@
 import * as nodePath from "path";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
+const buildFolder = `./build`;
+const srcFolder = `./src`;
+
 export const path = {
-	build: {
-		js: "./build/js/",
-		css: "./build/css/",
-		html: "./build/",
-		images: "./build/img/",
-		fonts: "./build/fonts/"
-	},
-	src: {
-		js: "./src/js/script.js",
-		images: "./src/img/**/*.{jpg,jpeg,png,gif,webp}",
-		svg: "./src/img/**/*.svg",
-		scss: "./src/scss/style.scss",
-		html: "./src/*.html",
-		fonts: "./src/fonts/*.{ttf,otf}"
-	},
-	watch: {
-		js: "./src/js/**/*.js",
-		scss: "./src/scss/**/*.scss",
-		html: "./src/**/*.html",
-		images: "./src/img/**/*.{jpg,jpeg,png,gif,webp,svg}",
-		files: "./src/files/**/*.*"
-	},
-	clean: "./build/"
+    build: {
+        html: `${buildFolder}/`,
+        css: `${buildFolder}/css/`,
+        images: `${buildFolder}/img/`,
+        js: `${buildFolder}/js/`,
+    },
+    src: {
+        html: `${srcFolder}/*.html`,
+        scss: `${srcFolder}/scss/style.scss`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        svg: `${srcFolder}/img/**/*.svg`,
+        js: `${srcFolder}/js/script.js`,
+    },
+    watch: {
+        html: `${srcFolder}/**/*.html`,
+        scss: `${srcFolder}/scss/**/*.scss`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
+        js: `${srcFolder}/js/**/*.js`,
+    },
+    clean: buildFolder,
+    buildFolder: buildFolder,
+    srcFolder: srcFolder,
+    rootFolder: rootFolder,
 };

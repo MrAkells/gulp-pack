@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include("html/_head.html", {"title": "Main Page"})
-	<body>
-		@@include("html/_header.html")
-		<main>
-			<!-- <img src="./img/img.png" alt="img"> -->
-		</main>
-		@@include("html/_footer.html")
-		<script src="js/script.min.js"></script>
-	</body>
+    @@include('html/_head.html',{ "title": "Main Page" })
+    <body>
+        @@include('html/_header.html',{})
+        <span>Hello!</span>
+        <main>
+            <img src="@img/asd.png" alt="" />
+        </main>
+        @@include('html/_footer.html',{})
+        <script src="./js/script.min.js"></script>
+    </body>
 </html>
