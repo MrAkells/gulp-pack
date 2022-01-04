@@ -12,6 +12,8 @@ import { js } from "./gulp/tasks/js.js";
 import { server } from "./gulp/tasks/server.js";
 
 global.app = {
+    isBuild: process.argv.includes("--build"),
+    isDev: !process.argv.includes("--build"),
     gulp: gulp,
     path: path,
     plugins: plugins,
@@ -29,5 +31,9 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, images, js));
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+
+export { dev };
+export { build };
 
 gulp.task("default", dev);

@@ -4,6 +4,7 @@ import notify from "gulp-notify";
 import prettier from "gulp-prettier";
 import browsersync from "browser-sync";
 import newer from "gulp-newer";
+import ifPlugin from "gulp-if";
 
 export const plugins = {
     replace: replace,
@@ -12,4 +13,5 @@ export const plugins = {
     prettier: prettier,
     browsersync: browsersync,
     newer: newer,
+    if: ifPlugin
 };
