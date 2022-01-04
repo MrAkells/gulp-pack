@@ -9,6 +9,7 @@ export const path = {
         html: `${buildFolder}/`,
         css: `${buildFolder}/css/`,
         images: `${buildFolder}/img/`,
+        fonts: `${buildFolder}/fonts/`,
         js: `${buildFolder}/js/`,
     },
     src: {
